@@ -421,10 +421,71 @@ function updatePageTitle(lang) {
   document.title = titles[page]?.[lang] || document.title;
 }
 
+/* ══════════════════════════════════════
+   THEME TOGGLE (Light / Dark Mode)
+   ══════════════════════════════════════ */
+
+/* ─── Create theme toggle button ─── */
+function createThemeToggle() {
+  const langToggles = document.querySelectorAll('.lang-toggle');
+  langToggles.forEach((langToggle) => {
+    const themeBtn = document.createElement('div');
+    themeBtn.className = 'theme-toggle';
+    themeBtn.setAttribute('role', 'button');
+    themeBtn.setAttribute('tabindex', '0');
+    themeBtn.setAttribute('aria-label', 'Toggle light/dark mode');
+
+    themeBtn.innerHTML = `
+      <div class="theme-toggle__btn">
+        <span class="theme-toggle__icon theme-toggle__icon--moon">🌙</span>
+        <span class="theme-toggle__icon theme-toggle__icon--sun">☀️</span>
+      </div>
+    `;
+
+    langToggle.insertAdjacentElement('afterend', themeBtn);
+  });
+}
+
+/* ─── Handle theme toggle ─── */
+function handleThemeToggle() {
+  document.addEventListener('click', (e) => {
+    const toggle = e.target.closest('.theme-toggle');
+    if (!toggle) return;
+
+    const html = document.documentElement;
+    const isCurrentlyLight = html.getAttribute('data-theme') === 'light';
+    const newTheme = isCurrentlyLight ? 'dark' : 'light';
+
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('guidentry-theme', newTheme);
+  });
+
+  // Keyboard support
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && e.target.closest('.theme-toggle')) {
+      e.target.closest('.theme-toggle').click();
+    }
+  });
+}
+
+/* ─── Apply saved theme ─── */
+function applySavedTheme() {
+  const savedTheme = localStorage.getItem('guidentry-theme') || 'dark';
+  if (savedTheme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+}
+
 /* ─── Init ─── */
 export function initI18n() {
+  // Apply saved theme ASAP to prevent flash
+  applySavedTheme();
+
   createLangToggle();
   handleToggle();
+
+  createThemeToggle();
+  handleThemeToggle();
 
   // Apply saved language
   const savedLang = localStorage.getItem('guidentry-lang') || 'tr';
