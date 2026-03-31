@@ -1,0 +1,258 @@
+/* ============================================================
+   GUIDENTRY — Animations
+   ============================================================ */
+
+/* ---------- Scroll Reveal Animations ---------- */
+[data-animate] {
+  opacity: 0;
+  transition: all var(--duration-slow) var(--ease-out-expo);
+}
+
+[data-animate].visible {
+  opacity: 1;
+}
+
+/* Fade Up */
+[data-animate="fade-up"] {
+  transform: translateY(60px);
+}
+[data-animate="fade-up"].visible {
+  transform: translateY(0);
+}
+
+/* Fade Down */
+[data-animate="fade-down"] {
+  transform: translateY(-60px);
+}
+[data-animate="fade-down"].visible {
+  transform: translateY(0);
+}
+
+/* Fade Left */
+[data-animate="fade-left"] {
+  transform: translateX(-80px);
+}
+[data-animate="fade-left"].visible {
+  transform: translateX(0);
+}
+
+/* Fade Right */
+[data-animate="fade-right"] {
+  transform: translateX(80px);
+}
+[data-animate="fade-right"].visible {
+  transform: translateX(0);
+}
+
+/* Scale In */
+[data-animate="scale-in"] {
+  transform: scale(0.85);
+}
+[data-animate="scale-in"].visible {
+  transform: scale(1);
+}
+
+/* Blur In */
+[data-animate="blur-in"] {
+  filter: blur(12px);
+  transform: translateY(20px);
+}
+[data-animate="blur-in"].visible {
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* Slide Up */
+[data-animate="slide-up"] {
+  transform: translateY(100%);
+  opacity: 0;
+}
+[data-animate="slide-up"].visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ---------- Stagger Delays ---------- */
+[data-delay="1"] { transition-delay: 100ms !important; }
+[data-delay="2"] { transition-delay: 200ms !important; }
+[data-delay="3"] { transition-delay: 300ms !important; }
+[data-delay="4"] { transition-delay: 400ms !important; }
+[data-delay="5"] { transition-delay: 500ms !important; }
+[data-delay="6"] { transition-delay: 600ms !important; }
+[data-delay="7"] { transition-delay: 700ms !important; }
+[data-delay="8"] { transition-delay: 800ms !important; }
+
+/* ---------- Hero Specific Animations ---------- */
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px var(--accent-glow); }
+  50% { box-shadow: 0 0 40px var(--accent-glow-strong); }
+}
+
+@keyframes bounce-arrow {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+  40% { transform: translateY(12px) translateX(-50%); }
+  60% { transform: translateY(6px) translateX(-50%); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes rotate-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes dash-animation {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ---------- Text Reveal ---------- */
+.text-reveal {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.text-reveal__inner {
+  display: inline-block;
+  animation: textRevealUp 0.8s var(--ease-out-expo) both;
+}
+
+@keyframes textRevealUp {
+  from {
+    transform: translateY(110%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Line Draw Animation ---------- */
+.line-draw {
+  width: 0;
+  transition: width 1s var(--ease-out-expo);
+}
+
+.line-draw.visible {
+  width: 100%;
+}
+
+/* ---------- Glow Pulse on Stats ---------- */
+.glow-pulse {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* ---------- Particle Orbit ---------- */
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+/* ---------- Counter Flip ---------- */
+.counter-value {
+  display: inline-block;
+  transition: transform 0.3s var(--ease-out-quart);
+}
+
+/* ---------- Magnetic Button Effect ---------- */
+.magnetic {
+  transition: transform 0.3s var(--ease-out-quart);
+}
+
+/* ---------- Page Transition ---------- */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-primary);
+  z-index: 9999;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+
+.page-transition.active {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+/* ---------- Loading Screen ---------- */
+.loader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-primary);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  transition: opacity 0.6s var(--ease-out-expo), visibility 0.6s;
+}
+
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader__logo {
+  width: 64px;
+  height: 64px;
+  background: var(--accent-gradient);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse-glow 1.5s ease-in-out infinite, float 2s ease-in-out infinite;
+}
+
+.loader__bar {
+  width: 120px;
+  height: 3px;
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.loader__bar-inner {
+  width: 40%;
+  height: 100%;
+  background: var(--accent-gradient);
+  border-radius: 3px;
+  animation: shimmer 1s ease-in-out infinite;
+}
+
+/* ---------- Cursor Glow (optional, desktop only) ---------- */
+.cursor-glow {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.08;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s;
+}

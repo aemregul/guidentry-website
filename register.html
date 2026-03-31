@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rehber Olarak Kayıt Ol — Guidentry</title>
+  <meta name="description" content="Guidentry'ye rehber olarak kayıt olun. TÜRSAB veya TUREB belgenizle doğrulama yapın." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="./" class="nav__logo">
+        <div class="nav__logo-icon">🧭</div>
+        <span>Guidentry</span>
+      </a>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav__links" id="navLinks">
+        <a href="./" class="nav__link">Anasayfa</a>
+        <a href="./about.html" class="nav__link">Hakkımızda</a>
+        <a href="./contact.html" class="nav__link">İletişim</a>
+        <a href="./login.html" class="nav__link">Oturum Aç</a>
+        <a href="./register.html" class="btn btn--primary btn--sm nav__cta active">Rehber Olarak Üye Ol</a>
+        <div class="nav__lang">EN</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Register -->
+  <section class="auth" style="padding-top:120px;padding-bottom:60px;">
+    <div class="auth__bg"></div>
+    <div class="auth__card glass-card" style="max-width:520px;" data-animate="scale-in">
+      <h1 class="auth__title">Rehber Olarak Kayıt Ol</h1>
+      <p class="auth__subtitle">Rehberlik bilgilerinizi girin ve dijital yolculuğunuza başlayın</p>
+
+      <form data-validate>
+        <div class="form-group">
+          <label class="form-label" for="reg-name">Ad Soyad</label>
+          <input type="text" id="reg-name" class="form-input" placeholder="Adınız ve soyadınız" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="reg-email">E-posta</label>
+          <input type="email" id="reg-email" class="form-input" placeholder="ornek@email.com" required />
+        </div>
+
+        <div class="form-group" style="position:relative;">
+          <label class="form-label" for="reg-password">Şifre</label>
+          <div style="position:relative;">
+            <input type="password" id="reg-password" class="form-input" placeholder="••••••••" required />
+            <span class="password-toggle">👁️</span>
+          </div>
+        </div>
+
+        <!-- Document Uploads -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+          <div>
+            <label class="form-label">TÜRSAB / TUREB Belgesi — Ön Yüz</label>
+            <div class="form-input--file" style="padding:24px 12px;">
+              <input type="file" accept="image/*,.pdf" style="display:none;" />
+              <div style="font-size:2rem;margin-bottom:8px;">📄</div>
+              <div class="file-label" style="font-size:var(--font-size-xs);color:var(--accent);">Belge Yükle</div>
+            </div>
+          </div>
+          <div>
+            <label class="form-label">TÜRSAB / TUREB Belgesi — Arka Yüz</label>
+            <div class="form-input--file" style="padding:24px 12px;">
+              <input type="file" accept="image/*,.pdf" style="display:none;" />
+              <div style="font-size:2rem;margin-bottom:8px;">📄</div>
+              <div class="file-label" style="font-size:var(--font-size-xs);color:var(--accent);">Belge Yükle</div>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn--primary auth__submit">Kayıt Ol</button>
+      </form>
+
+      <div class="auth__footer">
+        Zaten hesabınız var mı? <a href="./login.html">Giriş Yap</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

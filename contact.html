@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İletişim — Guidentry</title>
+  <meta name="description" content="Guidentry ile iletişime geçin. Sorularınız, önerileriniz ve iş birliği talepleriniz için bize ulaşın." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/pages.css" />
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="./" class="nav__logo">
+        <div class="nav__logo-icon">🧭</div>
+        <span>Guidentry</span>
+      </a>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav__links" id="navLinks">
+        <a href="./" class="nav__link">Anasayfa</a>
+        <a href="./about.html" class="nav__link">Hakkımızda</a>
+        <a href="./contact.html" class="nav__link active">İletişim</a>
+        <a href="./login.html" class="nav__link">Oturum Aç</a>
+        <a href="./register.html" class="btn btn--primary btn--sm nav__cta">Rehber Olarak Üye Ol</a>
+        <div class="nav__lang">EN</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header section">
+    <div class="container">
+      <span class="section-label" data-animate="fade-up">İletişim</span>
+      <h1 class="page-header__title" data-animate="fade-up" data-delay="1">
+        Bizimle <span class="gradient-text">İletişime Geçin</span>
+      </h1>
+      <p class="page-header__subtitle" data-animate="fade-up" data-delay="2">
+        Guidentry, turistler ve profesyonel rehberler arasındaki sesli anlatım deneyimini 
+        dijitalleştiren yenilikçi bir platformdur.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Info Cards -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="contact-info__grid">
+        <div class="glass-card contact-info__card" data-animate="fade-up" data-delay="1">
+          <div class="glass-card__icon" style="margin:0 auto 16px;">📞</div>
+          <div class="contact-info__label">Telefon</div>
+          <div class="contact-info__value">+90 543 255 58 41</div>
+        </div>
+
+        <div class="glass-card contact-info__card" data-animate="fade-up" data-delay="3">
+          <div class="glass-card__icon" style="margin:0 auto 16px;">✉️</div>
+          <div class="contact-info__label">E-Posta</div>
+          <div class="contact-info__value">info@guidentry.com.tr</div>
+        </div>
+
+        <div class="glass-card contact-info__card" data-animate="fade-up" data-delay="5">
+          <div class="glass-card__icon" style="margin:0 auto 16px;">📍</div>
+          <div class="contact-info__label">Adres</div>
+          <div class="contact-info__value">Barış Mah. Dr. Zeki Acar C.<br>No:1 P.K. 21 41470<br>Gebze / Kocaeli</div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form__wrapper" data-animate="fade-up" data-delay="3">
+        <div class="glass-card">
+          <h2 class="section-title" style="font-size:var(--font-size-xl);text-align:center;margin-bottom:8px;">Mesaj Gönderin</h2>
+          <p class="section-subtitle" style="text-align:center;margin:0 auto 32px;">Sorularınız ve önerileriniz için bize yazın.</p>
+          
+          <form data-validate>
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Ad Soyad</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="Adınız ve soyadınız" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">E-posta</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="ornek@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-subject">Konu</label>
+              <input type="text" id="contact-subject" class="form-input" placeholder="Mesajınızın konusu" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Mesaj</label>
+              <textarea id="contact-message" class="form-input" placeholder="Mesajınızı buraya yazın..." rows="5" required style="resize:vertical;min-height:120px;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary auth__submit">Mesaj Gönder</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="./" class="nav__logo" style="margin-bottom:8px;">
+            <div class="nav__logo-icon">🧭</div>
+            <span>Guidentry</span>
+          </a>
+          <p class="footer__brand-desc">
+            Turist rehberleri için donanımsız, mobil tabanlı sesli rehberlik platformu.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer__title">Platform</h4>
+          <a href="./#ozellikler" class="footer__link">Özellikler</a>
+          <a href="./#nasil-calisir" class="footer__link">Nasıl Çalışır?</a>
+        </div>
+        <div>
+          <h4 class="footer__title">Şirket</h4>
+          <a href="./about.html" class="footer__link">Hakkımızda</a>
+          <a href="./contact.html" class="footer__link">İletişim</a>
+        </div>
+        <div>
+          <h4 class="footer__title">Yasal</h4>
+          <a href="#" class="footer__link">Kullanım Koşulları</a>
+          <a href="#" class="footer__link">Gizlilik Politikası</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">© 2026 Guidentry. Tüm hakları saklıdır.</div>
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="Instagram">📷</a>
+          <a href="#" class="footer__social" aria-label="Twitter">🐦</a>
+          <a href="#" class="footer__social" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
