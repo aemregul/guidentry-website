@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="/css/components.css" />
   <link rel="stylesheet" href="/css/animations.css" />
   <link rel="stylesheet" href="/css/pages.css" />
-  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.png" />
 </head>
 <body>
 
@@ -20,18 +20,18 @@
   <nav class="nav scrolled" id="nav">
     <div class="nav__inner">
       <a href="./" class="nav__logo">
-        <div class="nav__logo-icon">🧭</div>
-        <span>Guidentry</span>
+        <div class="nav__logo-icon"><img src="/assets/logo-icon.png" alt="Guidentry" /></div>
+        <span><span class="logo-blue">Guide</span><span class="logo-gray">ntry</span></span>
       </a>
       <div class="nav__hamburger" id="hamburger">
         <span></span><span></span><span></span>
       </div>
       <div class="nav__links" id="navLinks">
-        <a href="./" class="nav__link">Anasayfa</a>
-        <a href="./about.html" class="nav__link">Hakkımızda</a>
-        <a href="./contact.html" class="nav__link">İletişim</a>
-        <a href="./login.html" class="nav__link active">Oturum Aç</a>
-        <a href="./register.html" class="btn btn--primary btn--sm nav__cta">Rehber Olarak Üye Ol</a>
+        <a href="./" class="nav__link" data-i18n="nav.home">Anasayfa</a>
+        <a href="./about.html" class="nav__link" data-i18n="nav.about">Hakkımızda</a>
+        <a href="./contact.html" class="nav__link" data-i18n="nav.contact">İletişim</a>
+        <a href="./login.html" class="nav__link active" data-i18n="nav.login">Oturum Aç</a>
+        <a href="./register.html" class="btn btn--primary btn--sm nav__cta" data-i18n="nav.cta">Rehber Olarak Üye Ol</a>
         <div class="nav__lang">EN</div>
       </div>
     </div>
@@ -41,28 +41,28 @@
   <section class="auth">
     <div class="auth__bg"></div>
     <div class="auth__card glass-card" data-animate="scale-in">
-      <h1 class="auth__title">Admin Girişi</h1>
-      <p class="auth__subtitle">E-posta ve şifrenizle giriş yapın</p>
+      <h1 class="auth__title" data-i18n="login.title">Admin Girişi</h1>
+      <p class="auth__subtitle" data-i18n="login.subtitle">E-posta ve şifrenizle giriş yapın</p>
 
       <form data-validate>
         <div class="form-group">
-          <label class="form-label" for="login-email">E-posta</label>
+          <label class="form-label" for="login-email" data-i18n="login.labelEmail">E-posta</label>
           <input type="email" id="login-email" class="form-input" placeholder="admin@guidentry.com.tr" required />
         </div>
 
         <div class="form-group" style="position:relative;">
-          <label class="form-label" for="login-password">Şifre</label>
+          <label class="form-label" for="login-password" data-i18n="login.labelPassword">Şifre</label>
           <div style="position:relative;">
             <input type="password" id="login-password" class="form-input" placeholder="••••••••" required />
             <span class="password-toggle">👁️</span>
           </div>
         </div>
 
-        <button type="submit" class="btn btn--primary auth__submit">Giriş Yap</button>
+        <button type="submit" class="btn btn--primary auth__submit" data-i18n="login.submitBtn">Giriş Yap</button>
       </form>
 
       <div class="auth__footer">
-        <a href="./">← Anasayfaya Dön</a>
+        <a href="./" data-i18n="login.backHome">← Anasayfaya Dön</a>
       </div>
     </div>
   </section>

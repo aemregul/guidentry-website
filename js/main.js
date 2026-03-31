@@ -17,6 +17,7 @@ import {
 
 import { initParticles } from './particles.js';
 import { initForms } from './forms.js';
+import { initI18n } from './i18n.js';
 
 // Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
@@ -41,4 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Forms
   initForms();
+
+  // Language
+  initI18n();
 });

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="/css/components.css" />
   <link rel="stylesheet" href="/css/animations.css" />
   <link rel="stylesheet" href="/css/pages.css" />
-  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.png" />
 </head>
 <body>
 
@@ -20,18 +20,18 @@
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="./" class="nav__logo">
-        <div class="nav__logo-icon">🧭</div>
-        <span>Guidentry</span>
+        <div class="nav__logo-icon"><img src="/assets/logo-icon.png" alt="Guidentry" /></div>
+        <span><span class="logo-blue">Guide</span><span class="logo-gray">ntry</span></span>
       </a>
       <div class="nav__hamburger" id="hamburger">
         <span></span><span></span><span></span>
       </div>
       <div class="nav__links" id="navLinks">
-        <a href="./" class="nav__link">Anasayfa</a>
-        <a href="./about.html" class="nav__link">Hakkımızda</a>
-        <a href="./contact.html" class="nav__link active">İletişim</a>
-        <a href="./login.html" class="nav__link">Oturum Aç</a>
-        <a href="./register.html" class="btn btn--primary btn--sm nav__cta">Rehber Olarak Üye Ol</a>
+        <a href="./" class="nav__link" data-i18n="nav.home">Anasayfa</a>
+        <a href="./about.html" class="nav__link" data-i18n="nav.about">Hakkımızda</a>
+        <a href="./contact.html" class="nav__link active" data-i18n="nav.contact">İletişim</a>
+        <a href="./login.html" class="nav__link" data-i18n="nav.login">Oturum Aç</a>
+        <a href="./register.html" class="btn btn--primary btn--sm nav__cta" data-i18n="nav.cta">Rehber Olarak Üye Ol</a>
         <div class="nav__lang">EN</div>
       </div>
     </div>
@@ -40,11 +40,11 @@
   <!-- Page Header -->
   <section class="page-header section">
     <div class="container">
-      <span class="section-label" data-animate="fade-up">İletişim</span>
-      <h1 class="page-header__title" data-animate="fade-up" data-delay="1">
+      <span class="section-label" data-animate="fade-up" data-i18n="contact.headerLabel">İletişim</span>
+      <h1 class="page-header__title" data-animate="fade-up" data-delay="1" data-i18n="contact.headerTitle">
         Bizimle <span class="gradient-text">İletişime Geçin</span>
       </h1>
-      <p class="page-header__subtitle" data-animate="fade-up" data-delay="2">
+      <p class="page-header__subtitle" data-animate="fade-up" data-delay="2" data-i18n="contact.headerSubtitle">
         Guidentry, turistler ve profesyonel rehberler arasındaki sesli anlatım deneyimini 
         dijitalleştiren yenilikçi bir platformdur.
       </p>
@@ -57,19 +57,19 @@
       <div class="contact-info__grid">
         <div class="glass-card contact-info__card" data-animate="fade-up" data-delay="1">
           <div class="glass-card__icon" style="margin:0 auto 16px;">📞</div>
-          <div class="contact-info__label">Telefon</div>
+          <div class="contact-info__label" data-i18n="contact.phone">Telefon</div>
           <div class="contact-info__value">+90 543 255 58 41</div>
         </div>
 
         <div class="glass-card contact-info__card" data-animate="fade-up" data-delay="3">
           <div class="glass-card__icon" style="margin:0 auto 16px;">✉️</div>
-          <div class="contact-info__label">E-Posta</div>
+          <div class="contact-info__label" data-i18n="contact.email">E-Posta</div>
           <div class="contact-info__value">info@guidentry.com.tr</div>
         </div>
 
         <div class="glass-card contact-info__card" data-animate="fade-up" data-delay="5">
           <div class="glass-card__icon" style="margin:0 auto 16px;">📍</div>
-          <div class="contact-info__label">Adres</div>
+          <div class="contact-info__label" data-i18n="contact.address">Adres</div>
           <div class="contact-info__value">Barış Mah. Dr. Zeki Acar C.<br>No:1 P.K. 21 41470<br>Gebze / Kocaeli</div>
         </div>
       </div>
@@ -77,31 +77,31 @@
       <!-- Contact Form -->
       <div class="contact-form__wrapper" data-animate="fade-up" data-delay="3">
         <div class="glass-card">
-          <h2 class="section-title" style="font-size:var(--font-size-xl);text-align:center;margin-bottom:8px;">Mesaj Gönderin</h2>
-          <p class="section-subtitle" style="text-align:center;margin:0 auto 32px;">Sorularınız ve önerileriniz için bize yazın.</p>
+          <h2 class="section-title" style="font-size:var(--font-size-xl);text-align:center;margin-bottom:8px;" data-i18n="contact.formTitle">Mesaj Gönderin</h2>
+          <p class="section-subtitle" style="text-align:center;margin:0 auto 32px;" data-i18n="contact.formSubtitle">Sorularınız ve önerileriniz için bize yazın.</p>
           
           <form data-validate>
             <div class="form-group">
-              <label class="form-label" for="contact-name">Ad Soyad</label>
-              <input type="text" id="contact-name" class="form-input" placeholder="Adınız ve soyadınız" required />
+              <label class="form-label" for="contact-name" data-i18n="contact.labelName">Ad Soyad</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="Adınız ve soyadınız" data-i18n="contact.placeholderName" data-i18n-attr="placeholder" required />
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="contact-email">E-posta</label>
+              <label class="form-label" for="contact-email" data-i18n="contact.labelEmail">E-posta</label>
               <input type="email" id="contact-email" class="form-input" placeholder="ornek@email.com" required />
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="contact-subject">Konu</label>
-              <input type="text" id="contact-subject" class="form-input" placeholder="Mesajınızın konusu" required />
+              <label class="form-label" for="contact-subject" data-i18n="contact.labelSubject">Konu</label>
+              <input type="text" id="contact-subject" class="form-input" placeholder="Mesajınızın konusu" data-i18n="contact.placeholderSubject" data-i18n-attr="placeholder" required />
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="contact-message">Mesaj</label>
-              <textarea id="contact-message" class="form-input" placeholder="Mesajınızı buraya yazın..." rows="5" required style="resize:vertical;min-height:120px;"></textarea>
+              <label class="form-label" for="contact-message" data-i18n="contact.labelMessage">Mesaj</label>
+              <textarea id="contact-message" class="form-input" placeholder="Mesajınızı buraya yazın..." data-i18n="contact.placeholderMessage" data-i18n-attr="placeholder" rows="5" required style="resize:vertical;min-height:120px;"></textarea>
             </div>
 
-            <button type="submit" class="btn btn--primary auth__submit">Mesaj Gönder</button>
+            <button type="submit" class="btn btn--primary auth__submit" data-i18n="contact.submitBtn">Mesaj Gönder</button>
           </form>
         </div>
       </div>
@@ -114,8 +114,8 @@
       <div class="footer__grid">
         <div>
           <a href="./" class="nav__logo" style="margin-bottom:8px;">
-            <div class="nav__logo-icon">🧭</div>
-            <span>Guidentry</span>
+            <div class="nav__logo-icon"><img src="/assets/logo-icon.png" alt="Guidentry" /></div>
+            <span><span class="logo-blue">Guide</span><span class="logo-gray">ntry</span></span>
           </a>
           <p class="footer__brand-desc">
             Turist rehberleri için donanımsız, mobil tabanlı sesli rehberlik platformu.
@@ -138,7 +138,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <div class="footer__copyright">© 2026 Guidentry. Tüm hakları saklıdır.</div>
+        <div class="footer__copyright"><span data-i18n="footer.copyright">© 2026 Guidentry. Tüm hakları saklıdır.</span></div>
         <div class="footer__socials">
           <a href="#" class="footer__social" aria-label="Instagram">📷</a>
           <a href="#" class="footer__social" aria-label="Twitter">🐦</a>

@@ -533,6 +533,7 @@
   -ms-overflow-style: none;
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
+  justify-content: center;
 }
 
 .showcase__carousel::-webkit-scrollbar {

@@ -18,13 +18,13 @@
   <link rel="stylesheet" href="/css/pages.css" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.png" />
 </head>
 <body>
 
   <!-- Loading Screen -->
   <div class="loader" id="loader">
-    <div class="loader__logo">🧭</div>
+    <div class="loader__logo"><img src="/assets/logo-icon.png" alt="Guidentry" /></div>
     <div class="loader__bar"><div class="loader__bar-inner"></div></div>
   </div>
 
@@ -32,8 +32,8 @@
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="./" class="nav__logo">
-        <div class="nav__logo-icon">🧭</div>
-        <span>Guidentry</span>
+        <div class="nav__logo-icon"><img src="/assets/logo-icon.png" alt="Guidentry" /></div>
+        <span><span class="logo-blue">Guide</span><span class="logo-gray">ntry</span></span>
       </a>
 
       <div class="nav__hamburger" id="hamburger">
@@ -43,11 +43,11 @@
       </div>
 
       <div class="nav__links" id="navLinks">
-        <a href="./" class="nav__link active">Anasayfa</a>
-        <a href="./about.html" class="nav__link">Hakkımızda</a>
-        <a href="./contact.html" class="nav__link">İletişim</a>
-        <a href="./login.html" class="nav__link">Oturum Aç</a>
-        <a href="./register.html" class="btn btn--primary btn--sm nav__cta">Rehber Olarak Üye Ol</a>
+        <a href="./" class="nav__link active" data-i18n="nav.home">Anasayfa</a>
+        <a href="./about.html" class="nav__link" data-i18n="nav.about">Hakkımızda</a>
+        <a href="./contact.html" class="nav__link" data-i18n="nav.contact">İletişim</a>
+        <a href="./login.html" class="nav__link" data-i18n="nav.login">Oturum Aç</a>
+        <a href="./register.html" class="btn btn--primary btn--sm nav__cta" data-i18n="nav.cta">Rehber Olarak Üye Ol</a>
         <div class="nav__lang">EN</div>
       </div>
     </div>
@@ -64,19 +64,19 @@
     <div class="container">
       <div class="hero__content">
         <div class="hero__text">
-          <div class="hero__eyebrow">📡 Mobil Tabanlı Rehberlik Platformu</div>
-          <h1 class="hero__title">
+          <div class="hero__eyebrow" data-i18n="index.heroEyebrow">📡 Mobil Tabanlı Rehberlik Platformu</div>
+          <h1 class="hero__title" data-i18n="index.heroTitle">
             Rehberliğin <br><span class="gradient-text">Geleceğine</span> <br>Hoş Geldiniz
           </h1>
-          <p class="hero__subtitle">
+          <p class="hero__subtitle" data-i18n="index.heroSubtitle">
             Geleneksel telsiz cihazlarına elveda deyin. Kendi telefonunuzla sesli 
             tur oluşturun, turistler QR ile anında bağlansın.
           </p>
           <div class="hero__actions">
-            <a href="./register.html" class="btn btn--primary btn--lg">
-              <span>🚀</span> Rehber Ol
+            <a href="./register.html" class="btn btn--primary btn--lg" data-i18n="index.heroCta1">
+              🚀 Rehber Ol
             </a>
-            <a href="#nasil-calisir" class="btn btn--ghost btn--lg">
+            <a href="#nasil-calisir" class="btn btn--ghost btn--lg" data-i18n="index.heroCta2">
               Nasıl Çalışır?
             </a>
           </div>
@@ -87,15 +87,15 @@
           <div class="hero__float hero__float--1">
             <div class="hero__float-icon">🎧</div>
             <div>
-              <div style="font-weight:700;color:var(--text-primary);">12 Dinleyici</div>
-              <div style="font-size:0.7rem;">Bağlantı Aktif</div>
+              <div style="font-weight:700;color:var(--text-primary);" data-i18n="index.float1Title">12 Dinleyici</div>
+              <div style="font-size:0.7rem;" data-i18n="index.float1Sub">Bağlantı Aktif</div>
             </div>
           </div>
           
           <div class="hero__float hero__float--2">
             <div class="hero__float-icon">🌍</div>
             <div>
-              <div style="font-weight:700;color:var(--text-primary);">Çoklu Dil</div>
+              <div style="font-weight:700;color:var(--text-primary);" data-i18n="index.float2Title">Çoklu Dil</div>
               <div style="font-size:0.7rem;">TR / EN / DE</div>
             </div>
           </div>
@@ -103,8 +103,8 @@
           <div class="hero__float hero__float--3">
             <div class="hero__float-icon">✅</div>
             <div>
-              <div style="font-weight:700;color:var(--accent-light);">Doğrulandı</div>
-              <div style="font-size:0.7rem;">TÜRSAB Onaylı</div>
+              <div style="font-weight:700;color:var(--accent-light);" data-i18n="index.float3Title">Doğrulandı</div>
+              <div style="font-size:0.7rem;" data-i18n="index.float3Sub">TÜRSAB Onaylı</div>
             </div>
           </div>
 
@@ -113,8 +113,8 @@
             <div class="hero__phone-notch"></div>
             <div class="hero__phone-screen">
               <div class="hero__phone-header">
-                <div class="hero__phone-status">● CANLI YAYIN</div>
-                <h3 class="hero__phone-title">Efes Antik Kent Turu</h3>
+                <div class="hero__phone-status" data-i18n="index.phoneLive">● CANLI YAYIN</div>
+                <h3 class="hero__phone-title" data-i18n="index.phoneTitle">Efes Antik Kent Turu</h3>
                 <div class="hero__phone-meta">
                   <span>⏱ ~2 saat</span>
                   <span>📍 Efes, İzmir</span>
@@ -126,8 +126,8 @@
                 <span></span><span></span><span></span><span></span><span></span>
               </div>
 
-              <div class="hero__phone-btn">🎧 Dinlemeye Başla</div>
-              <div class="hero__phone-listeners">👥 12 dinleyici bağlı</div>
+              <div class="hero__phone-btn" data-i18n="index.phoneBtn">🎧 Dinlemeye Başla</div>
+              <div class="hero__phone-listeners" data-i18n="index.phoneListeners">👥 12 dinleyici bağlı</div>
             </div>
           </div>
         </div>
@@ -135,7 +135,7 @@
     </div>
 
     <div class="hero__scroll-indicator">
-      <span>Kaydır</span>
+      <span data-i18n="index.heroScroll">Kaydır</span>
       <div class="hero__scroll-line"></div>
     </div>
   </section>
@@ -148,15 +148,15 @@
       <div class="stats__grid">
         <div class="stat-card" data-animate="fade-up">
           <div class="stat-card__number" data-counter="150" data-suffix="+">0</div>
-          <div class="stat-card__label">Kullanan Rehber</div>
+          <div class="stat-card__label" data-i18n="index.statGuides">Kullanan Rehber</div>
         </div>
         <div class="stat-card" data-animate="fade-up" data-delay="2">
           <div class="stat-card__number" data-counter="5000" data-suffix="+">0</div>
-          <div class="stat-card__label">Saat Tur</div>
+          <div class="stat-card__label" data-i18n="index.statHours">Saat Tur</div>
         </div>
         <div class="stat-card" data-animate="fade-up" data-delay="4">
           <div class="stat-card__number" data-counter="25000" data-suffix="+">0</div>
-          <div class="stat-card__label">Turist</div>
+          <div class="stat-card__label" data-i18n="index.statTourists">Turist</div>
         </div>
       </div>
     </div>
@@ -166,11 +166,11 @@
   <section class="how-it-works section" id="nasil-calisir">
     <div class="container">
       <div class="how-it-works__header">
-        <span class="section-label" data-animate="fade-up">Adım Adım</span>
-        <h2 class="section-title" data-animate="fade-up" data-delay="1">
+        <span class="section-label" data-animate="fade-up" data-i18n="index.stepsLabel">Adım Adım</span>
+        <h2 class="section-title" data-animate="fade-up" data-delay="1" data-i18n="index.stepsTitle">
           Dijital Rehberliğe <span class="gradient-text">4 Adımda</span> Geçin
         </h2>
-        <p class="section-subtitle" data-animate="fade-up" data-delay="2">
+        <p class="section-subtitle" data-animate="fade-up" data-delay="2" data-i18n="index.stepsSubtitle">
           Karmaşık kurulumlar, ek donanımlar yok. Rehber olarak başlamak çok kolay.
         </p>
       </div>
@@ -178,30 +178,30 @@
       <div class="steps-grid">
         <div class="glass-card step-card" data-animate="fade-up" data-delay="1">
           <div class="step-card__number">01</div>
-          <h3 class="step-card__title">Kayıt Ol</h3>
-          <p class="step-card__text">Kişisel bilgilerinizle hızlıca hesabınızı oluşturun.</p>
-          <a href="./register.html" class="btn btn--ghost btn--sm step-card__btn">Rehber Olarak Kayıt Ol</a>
+          <h3 class="step-card__title" data-i18n="index.step1Title">Kayıt Ol</h3>
+          <p class="step-card__text" data-i18n="index.step1Text">Kişisel bilgilerinizle hızlıca hesabınızı oluşturun.</p>
+          <a href="./register.html" class="btn btn--ghost btn--sm step-card__btn" data-i18n="index.step1Btn">Rehber Olarak Kayıt Ol</a>
         </div>
 
         <div class="glass-card step-card" data-animate="fade-up" data-delay="3">
           <div class="step-card__number">02</div>
-          <h3 class="step-card__title">Kimliğini Doğrula</h3>
-          <p class="step-card__text">TÜRSAB veya TUREB belgenizi yükleyerek kimliğinizi doğrulayın.</p>
-          <span class="btn btn--ghost btn--sm step-card__btn">Rehberlik Kimliğini Yükle</span>
+          <h3 class="step-card__title" data-i18n="index.step2Title">Kimliğini Doğrula</h3>
+          <p class="step-card__text" data-i18n="index.step2Text">TÜRSAB veya TUREB belgenizi yükleyerek kimliğinizi doğrulayın.</p>
+          <span class="btn btn--ghost btn--sm step-card__btn" data-i18n="index.step2Btn">Rehberlik Kimliğini Yükle</span>
         </div>
 
         <div class="glass-card step-card" data-animate="fade-up" data-delay="5">
           <div class="step-card__number">03</div>
-          <h3 class="step-card__title">Tur Paketi Seç</h3>
-          <p class="step-card__text">Size uygun olan tur paketini seçin ve avantajlardan yararlanın.</p>
-          <span class="btn btn--ghost btn--sm step-card__btn">Paketleri İncele</span>
+          <h3 class="step-card__title" data-i18n="index.step3Title">Tur Paketi Seç</h3>
+          <p class="step-card__text" data-i18n="index.step3Text">Size uygun olan tur paketini seçin ve avantajlardan yararlanın.</p>
+          <span class="btn btn--ghost btn--sm step-card__btn" data-i18n="index.step3Btn">Paketleri İncele</span>
         </div>
 
         <div class="glass-card step-card" data-animate="fade-up" data-delay="7">
           <div class="step-card__number">04</div>
-          <h3 class="step-card__title">Oda Oluştur</h3>
-          <p class="step-card__text">Turlarınız için odalar oluşturun, dinleyiciler QR ile bağlansın.</p>
-          <span class="btn btn--ghost btn--sm step-card__btn">Tur İçin Oda Oluştur</span>
+          <h3 class="step-card__title" data-i18n="index.step4Title">Oda Oluştur</h3>
+          <p class="step-card__text" data-i18n="index.step4Text">Turlarınız için odalar oluşturun, dinleyiciler QR ile bağlansın.</p>
+          <span class="btn btn--ghost btn--sm step-card__btn" data-i18n="index.step4Btn">Tur İçin Oda Oluştur</span>
         </div>
       </div>
     </div>
@@ -212,9 +212,9 @@
     <div class="container">
       <div class="platform__content">
         <div class="platform__text" data-animate="fade-right">
-          <span class="section-label">Neden Guidentry?</span>
-          <h2 class="section-title">Rehberler İçin <br><span class="gradient-text">Donanımsız</span> Ses Teknolojisi</h2>
-          <p class="section-subtitle">
+          <span class="section-label" data-i18n="index.platformLabel">Neden Guidentry?</span>
+          <h2 class="section-title" data-i18n="index.platformTitle">Rehberler İçin <br><span class="gradient-text">Donanımsız</span> Ses Teknolojisi</h2>
+          <p class="section-subtitle" data-i18n="index.platformSubtitle">
             Rehberlik deneyimini yeniden tasarlayan Guidentry; rehberlerin ek bir donanıma ihtiyaç duymadan, 
             yalnızca kendi mobil cihazlarıyla sesli anlatım yapabilmesini sağlar.
           </p>
@@ -223,22 +223,22 @@
             <div class="platform__feature" data-animate="fade-right" data-delay="2">
               <div class="platform__feature-icon">📱</div>
               <div>
-                <div class="platform__feature-title">Mobil Odaklı</div>
-                <div class="platform__feature-text">Ek donanım gerektirmez, telefonunuz yeter.</div>
+                <div class="platform__feature-title" data-i18n="index.feat1Title">Mobil Odaklı</div>
+                <div class="platform__feature-text" data-i18n="index.feat1Text">Ek donanım gerektirmez, telefonunuz yeter.</div>
               </div>
             </div>
             <div class="platform__feature" data-animate="fade-right" data-delay="3">
               <div class="platform__feature-icon">⚡</div>
               <div>
-                <div class="platform__feature-title">Anında Bağlantı</div>
-                <div class="platform__feature-text">Turistler QR kod ile saniyeler içinde bağlanır.</div>
+                <div class="platform__feature-title" data-i18n="index.feat2Title">Anında Bağlantı</div>
+                <div class="platform__feature-text" data-i18n="index.feat2Text">Turistler QR kod ile saniyeler içinde bağlanır.</div>
               </div>
             </div>
             <div class="platform__feature" data-animate="fade-right" data-delay="4">
               <div class="platform__feature-icon">🔒</div>
               <div>
-                <div class="platform__feature-title">Güvenli Altyapı</div>
-                <div class="platform__feature-text">Uçtan uca şifreli, güvenli iletişim kanalı.</div>
+                <div class="platform__feature-title" data-i18n="index.feat3Title">Güvenli Altyapı</div>
+                <div class="platform__feature-text" data-i18n="index.feat3Text">Uçtan uca şifreli, güvenli iletişim kanalı.</div>
               </div>
             </div>
           </div>
@@ -258,11 +258,11 @@
   <section class="features section" id="ozellikler">
     <div class="container">
       <div class="features__header">
-        <span class="section-label" data-animate="fade-up">Özellikler</span>
-        <h2 class="section-title" data-animate="fade-up" data-delay="1">
+        <span class="section-label" data-animate="fade-up" data-i18n="index.featuresLabel">Özellikler</span>
+        <h2 class="section-title" data-animate="fade-up" data-delay="1" data-i18n="index.featuresTitle">
           Rehberliği Dönüştüren <span class="gradient-text">Güçlü Özellikler</span>
         </h2>
-        <p class="section-subtitle" data-animate="fade-up" data-delay="2">
+        <p class="section-subtitle" data-animate="fade-up" data-delay="2" data-i18n="index.featuresSubtitle">
           Guidentry, modern turizm rehberliğinin ihtiyaç duyduğu tüm araçları sunar.
         </p>
       </div>
@@ -270,8 +270,8 @@
       <div class="features__grid">
         <div class="glass-card" data-animate="scale-in" data-delay="1">
           <div class="glass-card__icon">💻</div>
-          <h3 class="glass-card__title">Dijital ve Yazılım Tabanlı Çözüm</h3>
-          <p class="glass-card__text">
+          <h3 class="glass-card__title" data-i18n="index.card1Title">Dijital ve Yazılım Tabanlı Çözüm</h3>
+          <p class="glass-card__text" data-i18n="index.card1Text">
             Rehberlik hizmetlerinde kullanılan geleneksel telsiz sistemlerine alternatif olarak 
             dijital ve yazılım tabanlı yöntemler geliştirmeyi hedefliyoruz.
           </p>
@@ -279,8 +279,8 @@
 
         <div class="glass-card" data-animate="scale-in" data-delay="3">
           <div class="glass-card__icon">🌐</div>
-          <h3 class="glass-card__title">Modüler Yapı ve Çoklu Dil Desteği</h3>
-          <p class="glass-card__text">
+          <h3 class="glass-card__title" data-i18n="index.card2Title">Modüler Yapı ve Çoklu Dil Desteği</h3>
+          <p class="glass-card__text" data-i18n="index.card2Text">
             Çoklu dil desteği ve içerik paylaşımına olanak tanıyan modüler bir platform geliştiriyoruz. 
             Kullanıcıların ihtiyaçlarına göre özelleştirilebilen bir deneyim.
           </p>
@@ -288,8 +288,8 @@
 
         <div class="glass-card" data-animate="scale-in" data-delay="5">
           <div class="glass-card__icon">🌿</div>
-          <h3 class="glass-card__title">Yeşil Dönüşüm ve Sürdürülebilirlik</h3>
-          <p class="glass-card__text">
+          <h3 class="glass-card__title" data-i18n="index.card3Title">Yeşil Dönüşüm ve Sürdürülebilirlik</h3>
+          <p class="glass-card__text" data-i18n="index.card3Text">
             Mevcut internet altyapısını kullanarak ek donanım ihtiyacını ortadan kaldırmakta 
             ve çevresel sürdürülebilirliğe katkı sağlamaktadır.
           </p>
@@ -297,8 +297,8 @@
 
         <div class="glass-card" data-animate="scale-in" data-delay="7">
           <div class="glass-card__icon">🗓️</div>
-          <h3 class="glass-card__title">Tur Programı Entegrasyonu</h3>
-          <p class="glass-card__text">
+          <h3 class="glass-card__title" data-i18n="index.card4Title">Tur Programı Entegrasyonu</h3>
+          <p class="glass-card__text" data-i18n="index.card4Text">
             Tur programlarının entegrasyonu, rehberlerin ve katılımcıların etkinliği artırarak 
             daha iyi bir deneyim yaşamasını sağlar.
           </p>
@@ -313,10 +313,10 @@
     <div class="container">
       <div class="vision__content">
         <div class="vision__icon" data-animate="scale-in">🎯</div>
-        <h2 class="vision__title" data-animate="fade-up" data-delay="1">
+        <h2 class="vision__title" data-animate="fade-up" data-delay="1" data-i18n="index.visionTitle">
           <span class="gradient-text">Vizyonumuz</span>
         </h2>
-        <p class="vision__text" data-animate="fade-up" data-delay="3">
+        <p class="vision__text" data-animate="fade-up" data-delay="3" data-i18n="index.visionText">
           Rehberliğin sınırlarını kaldırmak. Rehberlerin bilgi, anlatım ve yaratıcılığını 
           teknolojiyle güçlendirerek; donanıma, mekâna ve kalabalıklara bağlı olmayan özgür 
           bir rehberlik dünyası kurmak istiyoruz. Her rehberin sesinin daha fazla insana 
@@ -331,11 +331,11 @@
   <section class="showcase section" id="mobil-uygulama">
     <div class="container">
       <div class="showcase__header">
-        <span class="section-label" data-animate="fade-up">Mobil Uygulama</span>
-        <h2 class="section-title" data-animate="fade-up" data-delay="1">
+        <span class="section-label" data-animate="fade-up" data-i18n="index.showcaseLabel">Mobil Uygulama</span>
+        <h2 class="section-title" data-animate="fade-up" data-delay="1" data-i18n="index.showcaseTitle">
           <span class="gradient-text">Mobil Uygulamamızı</span> Keşfedin
         </h2>
-        <p class="section-subtitle" data-animate="fade-up" data-delay="2">
+        <p class="section-subtitle" data-animate="fade-up" data-delay="2" data-i18n="index.showcaseSubtitle">
           Rehber ve dinleyici deneyimini uygulama ekranlarından keşfedin.
         </p>
       </div>
@@ -345,14 +345,14 @@
         <div class="showcase__phone">
           <div class="showcase__phone-notch"></div>
           <div class="showcase__phone-content">
-            <div class="showcase__phone-label">Tur Onayı</div>
+            <div class="showcase__phone-label" data-i18n="index.mockup1Label">Tur Onayı</div>
             <div style="padding:12px;background:rgba(20,184,166,0.1);border-radius:10px;border:1px solid rgba(20,184,166,0.2);margin:8px 0;">
-              <div style="font-size:0.65rem;color:var(--accent-light);font-weight:600;">● CANLI YAYIN</div>
-              <div style="font-size:0.85rem;font-weight:700;margin-top:6px;">Efes Antik Kent Turu</div>
-              <div style="font-size:0.65rem;color:var(--text-tertiary);margin-top:4px;">👤 Mehmet Yılmaz</div>
-              <div style="font-size:0.6rem;color:var(--text-tertiary);margin-top:8px;">⏱ ~2 saat • 📍 Efes, İzmir • 👥 12</div>
+              <div style="font-size:0.65rem;color:var(--accent-light);font-weight:600;" data-i18n="index.mockup1Live">● CANLI YAYIN</div>
+              <div style="font-size:0.85rem;font-weight:700;margin-top:6px;" data-i18n="index.mockup1Title">Efes Antik Kent Turu</div>
+              <div style="font-size:0.65rem;color:var(--text-tertiary);margin-top:4px;" data-i18n="index.mockup1Guide">👤 Mehmet Yılmaz</div>
+              <div style="font-size:0.6rem;color:var(--text-tertiary);margin-top:8px;" data-i18n="index.mockup1Meta">⏱ ~2 saat • 📍 Efes, İzmir • 👥 12</div>
             </div>
-            <div style="margin-top:auto;padding:12px;background:var(--accent-gradient);border-radius:10px;text-align:center;font-weight:700;font-size:0.8rem;">🎧 Dinlemeye Başla</div>
+            <div style="margin-top:auto;padding:12px;background:var(--accent-gradient);border-radius:10px;text-align:center;font-weight:700;font-size:0.8rem;" data-i18n="index.mockup1Btn">🎧 Dinlemeye Başla</div>
           </div>
         </div>
 
@@ -360,7 +360,7 @@
         <div class="showcase__phone">
           <div class="showcase__phone-notch"></div>
           <div class="showcase__phone-content">
-            <div class="showcase__phone-label">Dinleniyor</div>
+            <div class="showcase__phone-label" data-i18n="index.mockup2Label">Dinleniyor</div>
             <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
               <div style="display:flex;gap:3px;align-items:center;height:60px;">
                 <span style="width:3px;height:20px;background:var(--accent);border-radius:3px;animation:waveBar 1.2s ease-in-out infinite 0s;"></span>
@@ -370,12 +370,12 @@
                 <span style="width:3px;height:55px;background:var(--accent);border-radius:3px;animation:waveBar 1.2s ease-in-out infinite 0.6s;"></span>
                 <span style="width:3px;height:30px;background:var(--accent);border-radius:3px;animation:waveBar 1.2s ease-in-out infinite 0.75s;"></span>
               </div>
-              <div style="font-size:0.85rem;font-weight:700;">Efes Antik Kent Turu</div>
-              <div style="font-size:0.65rem;color:var(--text-tertiary);">Rehber: Mehmet Yılmaz</div>
-              <div style="font-size:0.7rem;color:var(--accent-light);">✓ Bağlantı Aktif</div>
-              <div style="font-size:0.7rem;color:var(--text-tertiary);">👥 12 dinleyici</div>
+              <div style="font-size:0.85rem;font-weight:700;" data-i18n="index.mockup2Title">Efes Antik Kent Turu</div>
+              <div style="font-size:0.65rem;color:var(--text-tertiary);" data-i18n="index.mockup2Guide">Rehber: Mehmet Yılmaz</div>
+              <div style="font-size:0.7rem;color:var(--accent-light);" data-i18n="index.mockup2Status">✓ Bağlantı Aktif</div>
+              <div style="font-size:0.7rem;color:var(--text-tertiary);" data-i18n="index.mockup2Listeners">👥 12 dinleyici</div>
             </div>
-            <div style="padding:12px;background:#ef4444;border-radius:10px;text-align:center;font-weight:700;font-size:0.8rem;">Turdan Ayrıl</div>
+            <div style="padding:12px;background:#ef4444;border-radius:10px;text-align:center;font-weight:700;font-size:0.8rem;" data-i18n="index.mockup2Btn">Turdan Ayrıl</div>
           </div>
         </div>
 
@@ -383,20 +383,20 @@
         <div class="showcase__phone">
           <div class="showcase__phone-notch"></div>
           <div class="showcase__phone-content">
-            <div class="showcase__phone-label">Turlarım</div>
-            <div style="font-size:0.9rem;font-weight:700;margin:4px 0;">Hoş geldin, Mehmet!</div>
-            <div style="font-size:0.65rem;color:var(--text-tertiary);margin-bottom:12px;">Turlarını yönet veya yeni tur oluştur</div>
+            <div class="showcase__phone-label" data-i18n="index.mockup3Label">Turlarım</div>
+            <div style="font-size:0.9rem;font-weight:700;margin:4px 0;" data-i18n="index.mockup3Welcome">Hoş geldin, Mehmet!</div>
+            <div style="font-size:0.65rem;color:var(--text-tertiary);margin-bottom:12px;" data-i18n="index.mockup3Sub">Turlarını yönet veya yeni tur oluştur</div>
             <div style="padding:10px;background:rgba(20,184,166,0.1);border-radius:10px;border:1px solid rgba(20,184,166,0.2);margin-bottom:8px;">
               <div style="display:flex;justify-content:space-between;align-items:center;">
-                <div style="font-size:0.75rem;font-weight:600;">Efes Antik Kent Turu</div>
-                <div style="font-size:0.55rem;padding:3px 8px;background:var(--accent);border-radius:20px;font-weight:700;">CANLI</div>
+                <div style="font-size:0.75rem;font-weight:600;" data-i18n="index.mockup3Tour">Efes Antik Kent Turu</div>
+                <div style="font-size:0.55rem;padding:3px 8px;background:var(--accent);border-radius:20px;font-weight:700;" data-i18n="index.mockup3Live">CANLI</div>
               </div>
               <div style="font-size:0.6rem;color:var(--text-tertiary);margin-top:4px;">👥 12 • ⏱ 45 dk</div>
             </div>
-            <div style="padding:10px;background:var(--accent-gradient);border-radius:10px;text-align:center;font-weight:700;font-size:0.8rem;margin:8px 0;">+ Yeni Tur Oluştur</div>
+            <div style="padding:10px;background:var(--accent-gradient);border-radius:10px;text-align:center;font-weight:700;font-size:0.8rem;margin:8px 0;" data-i18n="index.mockup3NewTour">+ Yeni Tur Oluştur</div>
             <div style="padding:10px;background:var(--bg-glass);border-radius:10px;border:1px solid var(--border-glass);">
-              <div style="font-size:0.75rem;font-weight:600;">Efes Antik Kent Turu</div>
-              <div style="font-size:0.6rem;color:var(--text-tertiary);margin-top:2px;">4 Şubat 2026 • ~2 saat</div>
+              <div style="font-size:0.75rem;font-weight:600;" data-i18n="index.mockup3Tour">Efes Antik Kent Turu</div>
+              <div style="font-size:0.6rem;color:var(--text-tertiary);margin-top:2px;" data-i18n="index.mockup3Date">4 Şubat 2026 • ~2 saat</div>
             </div>
           </div>
         </div>
@@ -405,20 +405,20 @@
         <div class="showcase__phone">
           <div class="showcase__phone-notch"></div>
           <div class="showcase__phone-content">
-            <div class="showcase__phone-label">Yeni Tur Oluştur</div>
+            <div class="showcase__phone-label" data-i18n="index.mockup4Label">Yeni Tur Oluştur</div>
             <div style="margin-top:8px;">
-              <div style="font-size:0.7rem;color:var(--text-secondary);margin-bottom:4px;">Tur Adı</div>
-              <div style="padding:8px 10px;background:var(--bg-glass);border:1px solid var(--border-glass);border-radius:8px;font-size:0.75rem;color:var(--text-tertiary);">Örn: Efes Antik Kent Turu</div>
+              <div style="font-size:0.7rem;color:var(--text-secondary);margin-bottom:4px;" data-i18n="index.mockup4NameLabel">Tur Adı</div>
+              <div style="padding:8px 10px;background:var(--bg-glass);border:1px solid var(--border-glass);border-radius:8px;font-size:0.75rem;color:var(--text-tertiary);" data-i18n="index.mockup4NamePlaceholder">Örn: Efes Antik Kent Turu</div>
             </div>
             <div style="margin-top:12px;">
-              <div style="font-size:0.7rem;color:var(--text-secondary);margin-bottom:4px;">Açıklama</div>
-              <div style="padding:8px 10px;background:var(--bg-glass);border:1px solid var(--border-glass);border-radius:8px;font-size:0.75rem;color:var(--text-tertiary);height:50px;">Tur hakkında kısa bilgi...</div>
+              <div style="font-size:0.7rem;color:var(--text-secondary);margin-bottom:4px;" data-i18n="index.mockup4DescLabel">Açıklama</div>
+              <div style="padding:8px 10px;background:var(--bg-glass);border:1px solid var(--border-glass);border-radius:8px;font-size:0.75rem;color:var(--text-tertiary);height:50px;" data-i18n="index.mockup4DescPlaceholder">Tur hakkında kısa bilgi...</div>
             </div>
             <div style="margin-top:12px;">
-              <div style="font-size:0.7rem;color:var(--text-secondary);margin-bottom:4px;">Konum</div>
-              <div style="padding:8px 10px;background:var(--bg-glass);border:1px solid var(--border-glass);border-radius:8px;font-size:0.75rem;color:var(--text-tertiary);">📍 Selçuk, İzmir</div>
+              <div style="font-size:0.7rem;color:var(--text-secondary);margin-bottom:4px;" data-i18n="index.mockup4LocLabel">Konum</div>
+              <div style="padding:8px 10px;background:var(--bg-glass);border:1px solid var(--border-glass);border-radius:8px;font-size:0.75rem;color:var(--text-tertiary);" data-i18n="index.mockup4LocPlaceholder">📍 Selçuk, İzmir</div>
             </div>
-            <div style="margin-top:auto;padding:12px;background:var(--accent-gradient);border-radius:10px;text-align:center;font-weight:700;font-size:0.8rem;">✓ Turu Oluştur</div>
+            <div style="margin-top:auto;padding:12px;background:var(--accent-gradient);border-radius:10px;text-align:center;font-weight:700;font-size:0.8rem;" data-i18n="index.mockup4Btn">✓ Turu Oluştur</div>
           </div>
         </div>
       </div>
@@ -429,18 +429,18 @@
   <section class="cta section" id="baslat">
     <div class="container">
       <div class="cta__content">
-        <h2 class="cta__title" data-animate="fade-up">
+        <h2 class="cta__title" data-animate="fade-up" data-i18n="index.ctaTitle">
           Dijital Rehberliğe <span class="gradient-text">Hemen Başlayın</span>
         </h2>
-        <p class="cta__text" data-animate="fade-up" data-delay="2">
+        <p class="cta__text" data-animate="fade-up" data-delay="2" data-i18n="index.ctaText">
           Turist rehberleri için tasarlanmış, donanımsız, mobil tabanlı sesli anlatım platformuna 
           bugün üye olun ve geleceğin rehberlik deneyimini sunmaya başlayın.
         </p>
         <div class="cta__actions" data-animate="fade-up" data-delay="4">
-          <a href="./register.html" class="btn btn--primary btn--lg">
-            <span>🚀</span> Ücretsiz Başla
+          <a href="./register.html" class="btn btn--primary btn--lg" data-i18n="index.ctaCta1">
+            🚀 Ücretsiz Başla
           </a>
-          <a href="./contact.html" class="btn btn--ghost btn--lg">
+          <a href="./contact.html" class="btn btn--ghost btn--lg" data-i18n="index.ctaCta2">
             Bize Ulaşın
           </a>
         </div>
@@ -454,41 +454,41 @@
       <div class="footer__grid">
         <div>
           <a href="./" class="nav__logo" style="margin-bottom:8px;">
-            <div class="nav__logo-icon">🧭</div>
-            <span>Guidentry</span>
+            <div class="nav__logo-icon"><img src="/assets/logo-icon.png" alt="Guidentry" /></div>
+            <span><span class="logo-blue">Guide</span><span class="logo-gray">ntry</span></span>
           </a>
           <p class="footer__brand-desc">
-            Turist rehberleri için donanımsız, mobil tabanlı sesli rehberlik platformu. 
-            Marmara Teknokent GO IDEA Programı kapsamında geliştirildi.
+            <span data-i18n="footer.brandDesc">Turist rehberleri için donanımsız, mobil tabanlı sesli rehberlik platformu. 
+            Marmara Teknokent GO IDEA Programı kapsamında geliştirildi.</span>
           </p>
         </div>
 
         <div>
-          <h4 class="footer__title">Platform</h4>
-          <a href="#ozellikler" class="footer__link">Özellikler</a>
-          <a href="#nasil-calisir" class="footer__link">Nasıl Çalışır?</a>
-          <a href="#mobil-uygulama" class="footer__link">Mobil Uygulama</a>
-          <a href="#istatistikler" class="footer__link">İstatistikler</a>
+          <h4 class="footer__title" data-i18n="footer.platform">Platform</h4>
+          <a href="#ozellikler" class="footer__link" data-i18n="footer.features">Özellikler</a>
+          <a href="#nasil-calisir" class="footer__link" data-i18n="footer.howItWorks">Nasıl Çalışır?</a>
+          <a href="#mobil-uygulama" class="footer__link" data-i18n="footer.mobileApp">Mobil Uygulama</a>
+          <a href="#istatistikler" class="footer__link" data-i18n="footer.stats">İstatistikler</a>
         </div>
 
         <div>
-          <h4 class="footer__title">Şirket</h4>
-          <a href="./about.html" class="footer__link">Hakkımızda</a>
-          <a href="./contact.html" class="footer__link">İletişim</a>
-          <a href="#vizyon" class="footer__link">Vizyonumuz</a>
+          <h4 class="footer__title" data-i18n="footer.company">Şirket</h4>
+          <a href="./about.html" class="footer__link" data-i18n="footer.aboutUs">Hakkımızda</a>
+          <a href="./contact.html" class="footer__link" data-i18n="footer.contactUs">İletişim</a>
+          <a href="#vizyon" class="footer__link" data-i18n="footer.vision">Vizyonumuz</a>
         </div>
 
         <div>
-          <h4 class="footer__title">Yasal</h4>
-          <a href="#" class="footer__link">Kullanım Koşulları</a>
-          <a href="#" class="footer__link">Gizlilik Politikası</a>
-          <a href="#" class="footer__link">KVKK Aydınlatma</a>
+          <h4 class="footer__title" data-i18n="footer.legal">Yasal</h4>
+          <a href="#" class="footer__link" data-i18n="footer.terms">Kullanım Koşulları</a>
+          <a href="#" class="footer__link" data-i18n="footer.privacy">Gizlilik Politikası</a>
+          <a href="#" class="footer__link" data-i18n="footer.kvkk">KVKK Aydınlatma</a>
         </div>
       </div>
 
       <div class="footer__bottom">
         <div class="footer__copyright">
-          © 2026 Guidentry. Tüm hakları saklıdır.
+          <span data-i18n="footer.copyright">© 2026 Guidentry. Tüm hakları saklıdır.</span>
         </div>
         <div class="footer__socials">
           <a href="#" class="footer__social" aria-label="Instagram">📷</a>
